@@ -29,7 +29,7 @@ public sealed class BounceCube2 : MonoBehaviour
 	{
 		// バッファの準備
 		var commands = new NativeArray<RaycastCommand>(targets.Length, Allocator.TempJob);
-		var results = new NativeArray<RaycastHit>(targets.Length, Allocator.Temp);
+		var results = new NativeArray<RaycastHit>(targets.Length, Allocator.TempJob);
 
 		// Raycastの開始点と位置を設定
 		for(int i=0; i<targets.Length; i++)

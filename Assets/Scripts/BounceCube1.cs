@@ -28,7 +28,7 @@ public class BounceCube1 : MonoBehaviour
 	void Update()
 	{
 		var commands = new NativeArray<RaycastCommand>(targets.Length, Allocator.TempJob);
-		var results = new NativeArray<RaycastHit>(targets.Length, Allocator.Temp);
+		var results = new NativeArray<RaycastHit>(targets.Length, Allocator.TempJob);
 
 		for(int i=0; i<targets.Length; i++)
 		{
